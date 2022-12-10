@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+interface Data {
+  id: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -6,6 +11,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
-  title = 'hello-world-angular';
+export class AppComponent implements OnInit {
+
+  public data: Data[] = [
+    { id: '1', name: 'Val do' },
+    { id: '2', name: 'Jon doe' },
+    { id: '3', name: 'Lorem name' },
+  ]
+
+  constructor() {}
+
+  ngOnInit(): void {
+
+  }
+  
 }
